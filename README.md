@@ -7,7 +7,5 @@ A implementation of a glorified iScroll gallery
 + CSS: Gumby
 + Touch: Hammer
 + Testing: Jasmine
-
-
 + Fullscreen: screenfull
 + Carousel: iScroll
