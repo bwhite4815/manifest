@@ -1,0 +1,28 @@
+// Responsive Mixins
+
+@mixin respond($media) {
+  @if $media == portrait-phones {
+    @media only screen and (max-width: $min-device-width) { @content; }
+  }
+  @else if $media == landscape-phones {
+    @media only screen and (min-width: breakpoint($min-device-width)) and (max-width: breakpoint($tablet-device-width)) { @content; }
+  }
+  @else if $media == all-phones {
+    @media only screen and (max-width: breakpoint($tablet-device-width)) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $mobile-breakpoint) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $tablet-breakpoint) { @content; }
+  }
+  @else if $media == non-desktop {
+    @media only screen and (max-width: $tablet-breakpoint - 1) { @content; }
+  }
+  @else if $media == print {
+    @media print { @content; }
+  }
+}
