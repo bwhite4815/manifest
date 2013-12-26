@@ -63,10 +63,6 @@ module.exports = function(grunt) {
   grunt.registerTask('compile', ['concat', 'uglify']);
   grunt.registerTask('build', ['smushit', 'concat', 'uglify', 'imagemagick-resize', 'copy']);
 
-/* 
-  To tide me over until someone publishes "fs" to the npm
-*/
-
 
 
 

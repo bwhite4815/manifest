@@ -73,10 +73,10 @@ $(function() {
 
     /* Fullscreen button */
     var fullscreenBtn = $('#fullscreen-btn');
+    // if this feature isn't supported, then hide
     console.log('Screenfull Supported/allowed: ' + !!screenfull.enabled);
-    if(!screenfull.enabled) {
-        fullscreenBtn.hide();
-    }
+    if(!screenfull.enabled) { fullscreenBtn.hide(); }
+    // on tap, fullscreen the image
     var fullscreenBtnTime = Hammer(fullscreenBtn).on("tap", function(event) {
         var val = $('#thumb-scroller-wrapper a.active img').attr('id').split('-').pop() - 1;
         // TODO: fullscreen carousel at this index.
